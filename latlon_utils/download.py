@@ -13,7 +13,7 @@ from latlon_utils import (
     get_data_dir, worldclim_variables, worldclim_resolutions, __version__)
 
 
-wc_base_url = 'http://biogeo.ucdavis.edu/data/worldclim/v2.1/base/'
+wc_base_url = 'https://geodata.ucdavis.edu/climate/worldclim/2_1/base/'
 
 SILENT = False
 
