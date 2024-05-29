@@ -314,9 +314,9 @@ def get_climate(lat, lon, variables=['tavg', 'prec'], res=None,
 
     def find_closest(arr, vals):
         idx = np.searchsorted(arr, vals)
+        idx[idx == arr.size] = arr.size - 1
         diff = arr[idx] - vals
         diffprev = vals - arr[idx - 1]
-        idx[idx == arr.size] = arr.size - 1
         idx[(idx > 0) & (idx < arr.size) & (diff > diffprev)] -= 1
         return idx
 
